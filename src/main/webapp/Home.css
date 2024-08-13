@@ -85,3 +85,46 @@ li a{
 	width: 100%;
 	margin-bottom: 20px;
 }
+
+.formdiv{
+	height:70px;
+	width: 80%;
+	margin-left: 100px
+}
+
+.filteroptions{
+	margin-left:-50px;
+	width: 233px;
+	float: left;
+}
+
+input{
+	width: 100px;
+	background-color:  #FEFAE0;
+	border-radius: 5px;
+	font-size:15px;
+	padding:3px;
+	border: 0.2px solid black;
+}
+
+h5{
+	margin-bottom: 4px;
+}
+
+select{
+	width: 100px;
+	background-color:  #FEFAE0;
+	border-radius: 5px;
+	font-size:15px;
+	padding:3px;
+}
+
+#submitbtn{
+	margin-top:30px;
+	margin-left: 60px;
+	width: 60px;
+	height: 35px;
+	color: white;
+	background-color: black;
+	border-radius: 10px;
+}

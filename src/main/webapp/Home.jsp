@@ -14,9 +14,10 @@
 <title>Home</title>
 </head>
 <body>
+
+
 	<div class="navbar">
 			<img alt="" src="logo.png" height="70px" id="logo">
-			
 		<ul>
 			<li><a href="Home.jsp">Home</a></li>
 			<li><a href="#">Products</a></li>
@@ -25,9 +26,41 @@
 			<li><a href="Login.jsp">Logout</a></li>
 		</ul>
 	</div>
+	
+	
 	<div class="poster">
 	</div>
-    <h3 align="center"> Our Best Products</h3>
+	
+	
+	<div class="formdiv">
+		<form action="filter" method="post">
+			<div class="filteroptions">
+				<h5>Search by Name</h5>
+				<input type="text" placeholder="Product" name="productname">
+			</div>
+			<div class="filteroptions">
+				<h5>Select Category</h5>
+				<select name="catagory">
+				<option>...</option>
+				<option value="Cake" >Cake</option>
+				<option value="Drink">Drink</option>
+				<option value="Meal" >Meal</option>
+			</select>
+			</div>
+			<div class="filteroptions">
+				<h5>Enter Price Range</h5>
+				<input type="text" placeholder="Minimum" name="minprice"><span> To</span>
+				<input type="text" placeholder="Maximum" name="maxprice">
+			</div>
+			<div class="filteroptions submitbtn">
+				<input type="submit" value="Filter" name="productname" id="submitbtn">
+			</div>
+		</form>
+		<br>
+	</div>
+	
+	
+    <h3 align="center" class="productheading"> Our Best Products</h3>
     <%
         List<ProductDetails> productList = (List<ProductDetails>) request.getAttribute("products");
         if (productList != null && !productList.isEmpty()) {

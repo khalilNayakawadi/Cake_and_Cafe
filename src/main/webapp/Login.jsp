@@ -7,7 +7,7 @@
 <link href="login.css" rel="stylesheet">
 <title>Login Page</title>
 </head>
-<body onload="myFunction()">
+<body>
 	<div class="maindiv">
 		<div class="innerdiv">
 			<h3 id="heading">Login to your account</h3>
