@@ -2,7 +2,7 @@
 
 *{
 	box-sizing: border-box;
-	font-family: cursive;
+	font-family: poppins;
 }
 
 
@@ -19,7 +19,7 @@ h1{
 	margin: 10px;
 	background-color: #FFF8F3;
 	margin-left: 5px;
-	box-shadow: 5px 2px 6px #ffe8c4;
+	border:0.1px solid #FF8343;
 	border-radius: 10px;
 	
 }
@@ -49,6 +49,7 @@ h4{
 
 #price{
 	color: green;
+	font-weight: bolder;
 }
 
 .navbar{
@@ -70,6 +71,7 @@ li a{
 	text-decoration: none;
 	margin-left: 40px;
 	color:#FF8343;
+	font-weight: bold;
 }
 
 #logo{
@@ -87,44 +89,65 @@ li a{
 }
 
 .formdiv{
-	height:70px;
-	width: 80%;
-	margin-left: 100px
+	height:80px;
+	width: 100%;
+	padding-left : 450px;
+	background-color: white;
+	box-shadow: 0px 5px 5px gray;
+
 }
 
 .filteroptions{
-	margin-left:-50px;
-	width: 233px;
+	margin-top : -10px;
+	margin-left:-130px;
+	width: 350px;
 	float: left;
+	
 }
 
 input{
-	width: 100px;
-	background-color:  #FEFAE0;
-	border-radius: 5px;
+	width: 150px;
+	border:none;
+	border-bottom : 2px solid #FF8343;
 	font-size:15px;
 	padding:3px;
 	border: 0.2px solid black;
 }
 
 h5{
+	color: black;
 	margin-bottom: 4px;
 }
 
 select{
-	width: 100px;
-	background-color:  #FEFAE0;
+	width: 150px;
 	border-radius: 5px;
 	font-size:15px;
 	padding:3px;
 }
 
 #submitbtn{
-	margin-top:30px;
-	margin-left: 60px;
-	width: 60px;
-	height: 35px;
-	color: white;
-	background-color: black;
-	border-radius: 10px;
+	margin-top:23px;
+	margin-left: 130px;
+	width: 50px;
+	height: 50px;
+	background-image: url("https://cdn-icons-png.flaticon.com/512/6711/6711481.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 25px;
+	outline: none;
+	border: 0.1px solid gray;
+	
+}
+
+.productheading{
+	margin-top: 60px;
+}
+
+#submitbtn:hover{
+	cursor: pointer;
+}
+
+.products li{
+	font-size: 13px;
 }

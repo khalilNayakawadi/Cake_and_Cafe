@@ -13,9 +13,14 @@
 <link rel="stylesheet" href="Home.css">
 <title>Home</title>
 </head>
-<body>
-
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<%
+		List<ProductDetails> productList = new ArrayList<ProductDetails>();
+		ProductCRUD pc = new ProductCRUD();
+%>
+<body onload="">
 	<div class="navbar">
 			<img alt="" src="logo.png" height="70px" id="logo">
 		<ul>
@@ -40,7 +45,7 @@
 			</div>
 			<div class="filteroptions">
 				<h5>Select Category</h5>
-				<select name="catagory">
+				<select name="category">
 				<option>...</option>
 				<option value="Cake" >Cake</option>
 				<option value="Drink">Drink</option>
@@ -53,37 +58,17 @@
 				<input type="text" placeholder="Maximum" name="maxprice">
 			</div>
 			<div class="filteroptions submitbtn">
-				<input type="submit" value="Filter" name="productname" id="submitbtn">
+				<input type="submit" value="" name="productname" id="submitbtn" >
 			</div>
 		</form>
 		<br>
 	</div>
-	
-	
     <h3 align="center" class="productheading"> Our Best Products</h3>
-    <%
-        List<ProductDetails> productList = (List<ProductDetails>) request.getAttribute("products");
-        if (productList != null && !productList.isEmpty()) {
-            for (ProductDetails pd : productList) {
-    %>
-    			
-                <div class="products">
-                    <a href="https://www.google.com"><img src="<%= pd.getImage() %>" alt="<%= pd.getProductName() %>" class ="images"/></a>
-                    <h4> <%= pd.getProductName() %></h4>
-                    <div class="prinfo">
-                    <ul type="none">
-                    <li>Category: <%= pd.getProductCatagory() %></li>
-                    <li>Price: <span id="price"><%= pd.getProductPrice() %></span>  &#8377;</li>
-                    <li>Description: <%= pd.getDescription() %></li>
-                    <li>Stock: <%= pd.getStock() %></li>
-                    </ul>
-                    </div>
-                </div>
-    <%
-            }
-        } else {
-        	ProductCRUD pc = new ProductCRUD();
-        	productList = pc.getProducts();
+    <%			if(request.getAttribute("filterProducts") == null){
+    			productList = pc.getProducts();
+    }else{
+    	 productList = (List<ProductDetails>)request.getAttribute("filterProducts");
+    }
         	 if (productList != null && !productList.isEmpty()) {
              for (ProductDetails pd : productList) {
     %>
@@ -102,7 +87,6 @@
     <%
         }
      }
-  }
     %>
 </body>
 </html>
