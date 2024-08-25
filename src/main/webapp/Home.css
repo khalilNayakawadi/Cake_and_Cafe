@@ -43,6 +43,7 @@ h1{
 }
 
 h4{
+	margin-top:2px;
 	margin-left: 19px;
 	color: #FF8343;
 }
@@ -146,8 +147,4 @@ select{
 
 #submitbtn:hover{
 	cursor: pointer;
-}
-
-.products li{
-	font-size: 13px;
 }
