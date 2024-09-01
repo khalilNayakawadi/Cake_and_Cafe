@@ -60,19 +60,19 @@ h4{
 	background-color: white;
 	width: 100%;
 	margin-top: -10px;
-	padding: 7px;
+	padding-top: 7px;
 }
 .navbar ul{
 	display: flex;
 	list-style: none;
-	margin-left: 750px;
-	margin-top: 23px;
+	margin-left: 850px;
+	margin-top: 3px;
 }
 li a{
 	text-decoration: none;
-	margin-left: 40px;
 	color:#FF8343;
-	font-weight: bold;
+	font-size:40px;
+	margin-left: 10px;
 }
 
 #logo{
@@ -107,7 +107,7 @@ li a{
 }
 
 input{
-	width: 150px;
+	width: 190px;
 	border:none;
 	border-bottom : 2px solid #FF8343;
 	font-size:15px;
@@ -121,7 +121,7 @@ h5{
 }
 
 select{
-	width: 150px;
+	width: 190px;
 	border-radius: 5px;
 	font-size:15px;
 	padding:3px;
