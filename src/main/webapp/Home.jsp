@@ -20,46 +20,49 @@
 		List<ProductDetails> productList = new ArrayList<ProductDetails>();
 		ProductCRUD pc = new ProductCRUD();
 %>
-<body onload="">
+<body>
 	<div class="navbar">
 			<img alt="" src="logo.png" height="70px" id="logo">
 		<ul>
-			<li><a href="Home.jsp">Home</a></li>
-			<li><a href="#">Products</a></li>
-			<li><a href="#">Cart</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="Login.jsp">Logout</a></li>
+			<%--<li><a href="#"id = "mode">&#127769;</a></li> --%>
+			<li><a href="Home.jsp" title="Home">&#127968;</a></li>
+			<li><a href="#" title="Products">&#128230;</a></li>
+			<li><a href="#" title="Cart">&#128722;</a></li>
+			<li><a href="#" title="About">&#128195;</a></li>
+			<li><a href="Login.jsp" title ="Logout">&#128100;</a></li>
 		</ul>
 	</div>
-	
 	
 	<div class="poster">
 	</div>
 	
 	
-	<div class="formdiv">
-		<form action="filter" method="post">
+	<div class="formdiv" id = "formDiv" >
+		<form action="filter" method="post" >
 			<div class="filteroptions">
 				<h5>Search by Name</h5>
-				<input type="text" placeholder="Product" name="productname">
+				<input type="text" placeholder="Product" name="productname" onkeypress="">
 			</div>
 			<div class="filteroptions">
 				<h5>Select Category</h5>
 				<select name="category">
 				<option>...</option>
-				<option value="Cake" >Cake</option>
+				<option value="Cake">Cake</option>
 				<option value="Drink">Drink</option>
-				<option value="Meal" >Meal</option>
+				<option value="Meal">Meal</option>
 			</select>
 			</div>
 			<div class="filteroptions">
-				<h5>Enter Price Range</h5>
-				<input type="text" placeholder="Minimum" name="minprice"><span> To</span>
-				<input type="text" placeholder="Maximum" name="maxprice">
+				<h5>Search by price</h5>
+				<select name="category">
+				<option>...</option>
+				<option value="min" >Minimum - Maximum</option>
+				<option value="max">Maximum - Minimum</option>
+			</select>
 			</div>
-			<div class="filteroptions submitbtn">
+		<%-- 	<div class="filteroptions submitbtn">
 				<input type="submit" value="" name="productname" id="submitbtn" >
-			</div>
+			</div> --%>
 		</form>
 		<br>
 	</div>
@@ -88,5 +91,6 @@
         }
      }
     %>
+    <script type="text/javascript" src="Home.js"></script>
 </body>
 </html>
