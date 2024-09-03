@@ -21,10 +21,10 @@
 		ProductCRUD pc = new ProductCRUD();
 %>
 <body>
-	<div class="navbar">
-			<img alt="" src="logo.png" height="70px" id="logo">
+	<div class="navbar" id = "navbarcomp">
+			<img alt="" src="logo (3).png" height="70px" id="logo">
 		<ul>
-			<%--<li><a href="#"id = "mode">&#127769;</a></li> --%>
+			<li><a href="#"id = "mode">&#127769;</a></li>
 			<li><a href="Home.jsp" title="Home">&#127968;</a></li>
 			<li><a href="#" title="Products">&#128230;</a></li>
 			<li><a href="#" title="Cart">&#128722;</a></li>
@@ -33,11 +33,11 @@
 		</ul>
 	</div>
 	
-	<div class="poster">
+	<div class="poster" id="postercomp">
 	</div>
 	
 	
-	<div class="formdiv" id = "formDiv" >
+	<div class="formdiv" id = "formcomp" >
 		<form action="filter" method="post" >
 			<div class="filteroptions">
 				<h5>Search by Name</h5>
@@ -66,6 +66,7 @@
 		</form>
 		<br>
 	</div>
+	<div id = "prcontainer">
     <h3 align="center" class="productheading"> Our Best Products</h3>
     <%			if(request.getAttribute("filterProducts") == null){
     			productList = pc.getProducts();
@@ -75,6 +76,9 @@
         	 if (productList != null && !productList.isEmpty()) {
              for (ProductDetails pd : productList) {
     %>
+    		
+    		
+    		
              <div class="products">
                     <a href="https://www.google.com"><img src="<%= pd.getImage() %>" alt="<%= pd.getProductName() %>" class ="images"/></a>
                     <h4> <%= pd.getProductName() %></h4>
@@ -82,7 +86,6 @@
                     <ul type="none">
                     <li>Category: <%= pd.getProductCatagory() %></li>
                     <li>Price: <span id="price"><%= pd.getProductPrice() %></span>  &#8377;</li>
-                    <li>Description: <%= pd.getDescription() %></li>
                     <li>Stock: <%= pd.getStock() %></li>
                     </ul>
                     </div>
@@ -91,6 +94,7 @@
         }
      }
     %>
+    </div>
     <script type="text/javascript" src="Home.js"></script>
 </body>
 </html>

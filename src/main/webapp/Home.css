@@ -13,15 +13,14 @@ h1{
 .products{
 	padding: 7px;
 	float: left;
-	height: 400px;
-	width: 360px;
+	height: 320px;
+	width: 300px;
 	overflow: hidden;
-	margin: 10px;
-	background-color: #FFF8F3;
+	margin: 15px;
+	/* background-color: #EEEDEB; */
 	margin-left: 5px;
-	border:0.1px solid #FF8343;
 	border-radius: 10px;
-	
+	border: 0.1px solid #c0c0c0;
 }
 
 .products:hover{
@@ -30,10 +29,11 @@ h1{
 }
 
 .images{
-	margin-left: 60px;
-	height: 220px;
-	width: 220px;
+	margin-left: 50px;
+	height: 180px;
+	width: 180px;
 	margin-top: 7px;
+	border-radius: 5px;
 }
 
 .prinfo{
@@ -113,6 +113,7 @@ input{
 	font-size:15px;
 	padding:3px;
 	border: 0.2px solid black;
+	background-color: #EBF4F6;
 }
 
 h5{
@@ -125,6 +126,7 @@ select{
 	border-radius: 5px;
 	font-size:15px;
 	padding:3px;
+	background-color: #EBF4F6;
 }
 
 #submitbtn{
@@ -147,4 +149,16 @@ select{
 
 #submitbtn:hover{
 	cursor: pointer;
+}
+
+.darkmode{
+	background-color: #31363F;
+	color: white;
+	border: none;
+}
+
+#prcontainer{
+	height: 100vh;
+	width: 1280px;
+	margin-left: 120px;
 }
